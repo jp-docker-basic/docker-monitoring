@@ -34,14 +34,16 @@ services:
     ports:
       - 9090:9090
 ```
+
 - The service name will be prometheus
 - `prom/prometheus` is the docker image being used for container creation
-    - As we are not using any tag so latest image will be pulled up.
+  - As we are not using any tag so latest image will be pulled up.
 - The Port configuration is 9090:9090
-    - This means that the port exposed inside the container and on the host machine is 9090
-    - If you want to connect to this container then you call the host machine on port 9090
+  - This means that the port exposed inside the container and on the host machine is 9090
+  - If you want to connect to this container then you call the host machine on port 9090
 
 ### Let’s understand the volume part
+
 - Here we are mounting the prometheus.yml file on the Host machine to the /etc/prometheus/prometheus.yml file inside the docker container.
 - This will help to write the new configuration which the Prometheus container can understand.
 
