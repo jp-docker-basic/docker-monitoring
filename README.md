@@ -44,3 +44,11 @@ services:
 ### Let’s understand the volume part
 - Here we are mounting the prometheus.yml file on the Host machine to the /etc/prometheus/prometheus.yml file inside the docker container.
 - This will help to write the new configuration which the Prometheus container can understand.
+
+## Add Prometheus Configuration File
+
+Prometheus needs to know the configuration for scraping. Create `prometheus.yml` file in the same folder where you have created the `prometheus-grafana.yml` and then you can add the scraping configuration later on.
+
+```bash
+touch prometheus.yml
+```
