@@ -47,7 +47,7 @@ One last change you need to do is configure in your `prometheus.yml` file the Al
 
 The final adjustment required is to configure the `Alertmanager` server target, incorporate the newly defined alert rules, and set an evaluation interval for the alerting rules in your `prometheus.yml` file.
 
-![alt text](image-1.png)
+![alt text](./assets/yaml-code.png)
 
 ```yaml
 global:
@@ -75,6 +75,10 @@ Once all the changes are saved, proceed to restart your docker compose orchestra
 
 > docker compose up -d
 
-You can access your newly created Alermanager server in http://localhost:9093.
+You can access your newly created Alermanager server in `http://localhost:9093`.
 
-![alt text](image-2.png)
+![alt text](./assets/alert-dashboard.png)
+
+For testing purposes, you can stop the Node Exporter container, and after one minute, the alert will trigger. The `Alertmanager dashboard` will display the triggered alert.
+
+![alt text](./assets/alertmessage.png)
