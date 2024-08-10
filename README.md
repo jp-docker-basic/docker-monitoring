@@ -79,3 +79,37 @@ services:
     volumes:
       - ./grafana:/etc/grafana/provisioning/datasources
 ```
+
+### Start the Services
+
+Run the below command to start the Prometheus and Grafana services in foreground mode.
+
+This will create two docker containers
+
+```bash
+docker compose -f prometheus-grafana.yml up
+```
+![docker compose run](./assets/docker-compose-run.png)
+![docker metrics](./assets/metrics.png)
+
+### Check Prometheus service is running
+
+Go to your web browser and open the below URL and this will open the `Prometheus` interface.
+
+> http://localhost:9090/
+![Prometheus](./assets/prometheus-dashboard.png)
+
+### Check Grafana is Running
+
+Go to your web browser and open the below URL and this will open the `Grafana` interface.
+
+> http://localhost:3000/
+
+![alt text](./assets/grafana-login.png)
+
+Enter the below credentials and this will help you to Login and will ask for setting up a new password.
+
+`username = admin`
+`password = admin`
+
+![alt text](./assets/grafana-dashboard.png)
