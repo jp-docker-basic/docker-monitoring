@@ -70,3 +70,11 @@ scrape_configs:
       - targets:
           - node-exporter:9100
 ```
+
+Once all the changes are saved, proceed to restart your docker compose orchestration.
+
+> docker compose up -d
+
+You can access your newly created Alermanager server in http://localhost:9093.
+
+![alt text](image-2.png)
